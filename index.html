@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ayu Rizkyca Awalia — builds things, tells stories</title>
-<meta name="description" content="Portfolio Ayu Rizkyca Awalia — engineer yang build produk end-to-end, dari baris kode pertama sampai ~500 user organik. Zero ads.">
+<title>Ayu Rizkyca Awalia — makes content, builds products</title>
+<meta name="description" content="Portfolio Ayu Rizkyca Awalia — content creative yang juga software engineer. Ide, shoot, edit bareng AI, dan bikin KlipKlip sampai 2.000+ user tanpa ads.">
 <meta name="author" content="Ayu Rizkyca Awalia">
-<link rel="canonical" href="https://ayurizkyca.netlify.app/">
+<link rel="canonical" href="https://ayura-web.netlify.app/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Ayu Rizkyca Awalia — builds things, tells stories">
-<meta property="og:description" content="Engineer yang build produk end-to-end — dari baris kode pertama sampai ~500 user organik. Zero ads.">
-<meta property="og:url" content="https://ayurizkyca.netlify.app/">
-<meta property="og:image" content="https://ayurizkyca.netlify.app/og-image.png">
+<meta property="og:title" content="Ayu Rizkyca Awalia — makes content, builds products">
+<meta property="og:description" content="Content creative yang juga engineer. Ide, shoot, edit bareng AI — dan bikin KlipKlip sampai 2.000+ user tanpa ads.">
+<meta property="og:url" content="https://ayura-web.netlify.app/">
+<meta property="og:image" content="https://ayura-web.netlify.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FDF4F5">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
 <!--
@@ -24,9 +25,7 @@
   Cukup taruh file di folder /foto dengan nama persis:
     hero-1.jpg   → polaroid "di balik layar" (rasio 4:5)
     hero-2.jpg   → polaroid "di depan kamera" (rasio 4:5)
-    tiktok-1.jpg → screenshot konten KlipKlip (rasio 9:16)
-    tiktok-2.jpg → screenshot build in public (rasio 9:16)
-    tiktok-3.jpg → screenshot crafting/upcycling (rasio 9:16)
+    konten-1.jpg … konten-5.jpg → thumbnail konten (rasio 9:16)
     about.jpg    → foto santai di section About (rasio 4:5)
   Begitu file ada, foto langsung muncul — tanpa edit HTML.
   Selama file belum ada, placeholder yang tampil.
@@ -39,17 +38,18 @@
 
 <style>
 :root{
-  --paper:#FBF4EC;
-  --paper-deep:#F3E9DD;
-  --ink:#27201A;
-  --ink-soft:#5C5248;
-  --spruce:#175C4C;
-  --spruce-soft:#DCEDE5;
-  --raspberry:#C43F6C;
-  --raspberry-soft:#F9E3EB;
-  --marigold:#EDAA3C;
-  --marigold-soft:#FBEED3;
-  --lilac:#B9AEE8;
+  --paper:#FDF4F5;
+  --paper-deep:#F8E3E8;
+  --ink:#2F1B26;
+  --ink-soft:#6E5563;
+  --mauve:#9A4673;
+  --mauve-soft:#F3DCE8;
+  --raspberry:#CF3D70;
+  --raspberry-soft:#FCE1EA;
+  --blush:#F4A9C0;
+  --blush-soft:#FBE0E8;
+  --peach:#F6B79E;
+  --lilac:#CDB8EE;
   --display:"Fraunces",serif;
   --body:"Instrument Sans",sans-serif;
   --mono:"IBM Plex Mono",monospace;
@@ -76,7 +76,7 @@ body::before{
   opacity:.05;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-::selection{background:var(--marigold-soft)}
+::selection{background:var(--blush-soft)}
 a{color:inherit}
 img{max-width:100%;display:block}
 
@@ -112,13 +112,13 @@ img{max-width:100%;display:block}
   font-size:12px;
   letter-spacing:.2em;
   text-transform:uppercase;
-  color:var(--spruce);
+  color:var(--mauve);
   display:flex;
   align-items:center;
   gap:10px;
   margin-bottom:22px;
 }
-.eyebrow::before{content:"";width:34px;height:1.5px;background:var(--spruce)}
+.eyebrow::before{content:"";width:34px;height:1.5px;background:var(--mauve)}
 h1{
   font-family:var(--display);
   font-variation-settings:"opsz" 120,"SOFT" 40,"WONK" 1;
@@ -127,7 +127,7 @@ h1{
   line-height:1.08;
   letter-spacing:-.015em;
 }
-h1 em{font-style:italic;font-weight:480}
+h1 em{font-style:italic;font-weight:480;color:var(--mauve)}
 .hl{
   position:relative;
   white-space:nowrap;
@@ -138,7 +138,7 @@ h1 em{font-style:italic;font-weight:480}
   position:absolute;
   left:-4px;right:-4px;bottom:6%;
   height:38%;
-  background:var(--marigold-soft);
+  background:var(--blush-soft);
   z-index:-1;
   transform:rotate(-1.2deg);
 }
@@ -151,10 +151,10 @@ h1 em{font-style:italic;font-weight:480}
   transform:rotate(-2deg);
   position:relative;
 }
-.zero-ads svg{position:absolute;left:-8%;top:-22%;width:116%;height:150%;pointer-events:none}
+.zero-ads svg{position:absolute;left:-6%;top:-28%;width:112%;height:156%;pointer-events:none}
 .hero-sub{
   margin-top:26px;
-  max-width:46ch;
+  max-width:48ch;
   color:var(--ink-soft);
   font-size:17px;
 }
@@ -170,11 +170,11 @@ h1 em{font-style:italic;font-weight:480}
   background:var(--ink);
   color:var(--paper);
   transition:transform .18s ease,box-shadow .18s ease;
-  box-shadow:3px 3px 0 var(--marigold);
+  box-shadow:3px 3px 0 var(--blush);
 }
-.btn.ghost{background:transparent;color:var(--ink);box-shadow:3px 3px 0 var(--spruce-soft)}
-.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--marigold)}
-.btn.ghost:hover{box-shadow:5px 5px 0 var(--spruce-soft)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:3px 3px 0 var(--mauve-soft)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--blush)}
+.btn.ghost:hover{box-shadow:5px 5px 0 var(--mauve-soft)}
 
 /* photo stack */
 .photo-stack{position:relative;height:420px}
@@ -183,7 +183,7 @@ h1 em{font-style:italic;font-weight:480}
   position:absolute;
   background:#fff;
   padding:12px 12px 44px;
-  box-shadow:0 10px 26px rgba(39,32,26,.16);
+  box-shadow:0 10px 26px rgba(47,27,38,.16);
   transition:transform .25s ease;
 }
 .polaroid:hover{transform:rotate(0) scale(1.03)!important;z-index:5}
@@ -204,7 +204,7 @@ h1 em{font-style:italic;font-weight:480}
 }
 .p1{width:62%;top:6%;left:0;transform:rotate(-4deg);z-index:2}
 .p2{width:56%;top:34%;right:0;transform:rotate(3deg);z-index:3}
-.p1 .tape{background:var(--marigold)}
+.p1 .tape{background:var(--blush)}
 .p2 .tape{background:var(--lilac)}
 .photo-slot{aspect-ratio:4/5;background:var(--paper-deep);overflow:hidden}
 .photo-slot img{width:100%;height:100%;object-fit:cover}
@@ -213,7 +213,7 @@ h1 em{font-style:italic;font-weight:480}
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
   gap:6px;
-  border:2px dashed rgba(39,32,26,.25);
+  border:2px dashed rgba(47,27,38,.25);
   font-family:var(--hand);
   font-size:15px;
   color:var(--ink-soft);
@@ -225,13 +225,13 @@ h1 em{font-style:italic;font-weight:480}
 .marquee{
   border-top:1.5px solid var(--ink);
   border-bottom:1.5px solid var(--ink);
-  background:var(--spruce);
+  background:var(--mauve);
   color:var(--paper);
   overflow:hidden;
   white-space:nowrap;
   padding:12px 0;
 }
-.marquee-track{display:inline-block;animation:scroll 26s linear infinite}
+.marquee-track{display:inline-block;animation:scroll 30s linear infinite}
 .marquee span{
   font-family:var(--mono);
   font-size:13px;
@@ -259,7 +259,7 @@ section{max-width:var(--maxw);margin:0 auto;padding:88px 24px}
   position:absolute;
   top:-10px;left:14px;
   width:52px;height:20px;
-  background:var(--marigold);
+  background:var(--blush);
   opacity:.8;
   transform:rotate(-4deg);
 }
@@ -273,6 +273,47 @@ h2{
   max-width:22ch;
 }
 .lede{margin-top:20px;max-width:58ch;color:var(--ink-soft)}
+
+/* ===== content corner ===== */
+.corner{background:var(--paper-deep);border-bottom:1.5px solid var(--ink)}
+.corner-inner{max-width:var(--maxw);margin:0 auto;padding:88px 24px}
+.corner .sec-label{background:var(--paper)}
+.reels{display:flex;flex-wrap:wrap;justify-content:center;gap:44px 34px;margin-top:56px;--cols:3;--gap:34px}
+.reels .reel{width:calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));max-width:300px}
+@media(max-width:840px){.reels{--cols:2;--gap:20px;gap:34px 20px}}
+.reel{background:#fff;padding:12px 12px 64px;box-shadow:0 10px 24px rgba(47,27,38,.14);position:relative;transition:transform .22s ease;text-decoration:none;display:block}
+.reel:nth-child(3n+1){transform:rotate(-2.2deg)}
+.reel:nth-child(3n+2){transform:rotate(1.4deg) translateY(14px)}
+.reel:nth-child(3n){transform:rotate(-1deg)}
+.reel:hover{transform:rotate(0) scale(1.04);z-index:4}
+.reel .tape{position:absolute;top:-11px;left:50%;width:80px;height:24px;transform:translateX(-50%) rotate(2deg);opacity:.85}
+.reel:nth-child(3n+1) .tape{background:var(--blush)}
+.reel:nth-child(3n+2) .tape{background:var(--peach)}
+.reel:nth-child(3n) .tape{background:var(--lilac)}
+.reel .photo-slot{aspect-ratio:9/16}
+.reel .caption{position:absolute;bottom:32px;left:0;right:0;text-align:center;font-family:var(--hand);font-size:16px;color:var(--ink);padding:0 8px}
+.reel .kind{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mauve);padding:0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* stats strip */
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.stats span{font-family:var(--mono);font-size:12px;letter-spacing:.06em;background:var(--paper);border:1px solid rgba(47,27,38,.2);padding:6px 12px}
+.stats b{font-weight:500;color:var(--mauve)}
+
+/* workflow */
+.flow{margin-top:72px;border:1.5px solid var(--ink);background:#fff;display:grid;grid-template-columns:repeat(5,1fr)}
+.flow-step{padding:22px 20px 24px;border-right:1.5px solid var(--ink);position:relative}
+.flow-step:last-child{border-right:0}
+.flow-step .num{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--mauve)}
+.flow-step h3{font-family:var(--display);font-size:19px;font-weight:600;margin:6px 0 6px;line-height:1.25}
+.flow-step p{font-size:14px;color:var(--ink-soft);line-height:1.55}
+.flow-title{margin-top:72px;font-family:var(--hand);font-size:19px;color:var(--mauve);transform:rotate(-1deg);display:inline-block}
+.flow-title+.flow{margin-top:14px}
+@media(max-width:840px){
+  .flow{grid-template-columns:1fr 1fr}
+  .flow-step{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .flow-step:nth-child(odd){border-right:1.5px solid var(--ink)}
+  .flow-step:last-child{grid-column:1/-1;border-right:0;border-bottom:0}
+}
 
 /* ===== case study ===== */
 .case{display:grid;grid-template-columns:1.25fr .9fr;gap:56px;margin-top:48px;align-items:start}
@@ -290,7 +331,7 @@ h2{
   width:12px;height:12px;
   border-radius:50%;
   background:var(--paper);
-  border:2.5px solid var(--spruce);
+  border:2.5px solid var(--mauve);
 }
 .story-step h3{
   font-family:var(--display);
@@ -315,9 +356,8 @@ h2{
   font-family:var(--mono);
   font-size:13.5px;
   transform:rotate(1.6deg);
-  box-shadow:0 14px 30px rgba(39,32,26,.18);
+  box-shadow:0 14px 30px rgba(47,27,38,.18);
   position:relative;
-  --notch:radial-gradient(circle at 50% 0,transparent 7px,#fff 7.5px);
 }
 .receipt::before,.receipt::after{
   content:"";
@@ -326,23 +366,23 @@ h2{
 }
 .receipt::before{top:-13px;background-image:radial-gradient(circle at 11px 14px,#fff 7px,transparent 7.5px)}
 .receipt::after{bottom:-13px;background-image:radial-gradient(circle at 11px 0,#fff 7px,transparent 7.5px)}
-.receipt .r-head{text-align:center;border-bottom:1.5px dashed rgba(39,32,26,.35);padding-bottom:14px;margin-bottom:14px}
+.receipt .r-head{text-align:center;border-bottom:1.5px dashed rgba(47,27,38,.35);padding-bottom:14px;margin-bottom:14px}
 .receipt .r-head strong{font-size:16px;letter-spacing:.1em;display:block}
 .receipt .r-head span{font-size:11.5px;color:var(--ink-soft)}
 .receipt .row{display:flex;justify-content:space-between;gap:10px;padding:5px 0}
 .receipt .row span:last-child{white-space:nowrap}
-.receipt .sep{border-bottom:1.5px dashed rgba(39,32,26,.35);margin:12px 0}
+.receipt .sep{border-bottom:1.5px dashed rgba(47,27,38,.35);margin:12px 0}
 .receipt .total{font-weight:500;font-size:15px}
 .receipt .r-foot{
   text-align:center;
   margin-top:16px;
   font-family:var(--hand);
   font-size:16px;
-  color:var(--spruce);
+  color:var(--mauve);
 }
 .receipt .stamp{
   position:absolute;
-  right:14px;bottom:52px;
+  right:-14px;top:22px;
   font-family:var(--mono);
   font-size:11px;
   letter-spacing:.16em;
@@ -366,9 +406,9 @@ h2{
   transition:transform .18s ease,box-shadow .18s ease;
 }
 .pillar:hover{transform:translate(-3px,-3px)}
-.pillar:nth-child(1):hover{box-shadow:6px 6px 0 var(--spruce-soft)}
-.pillar:nth-child(2):hover{box-shadow:6px 6px 0 var(--raspberry-soft)}
-.pillar:nth-child(3):hover{box-shadow:6px 6px 0 var(--marigold-soft)}
+.pillar:nth-child(1):hover{box-shadow:6px 6px 0 var(--raspberry-soft)}
+.pillar:nth-child(2):hover{box-shadow:6px 6px 0 var(--mauve-soft)}
+.pillar:nth-child(3):hover{box-shadow:6px 6px 0 var(--blush-soft)}
 .pillar .tag{
   font-family:var(--mono);
   font-size:11px;
@@ -378,11 +418,38 @@ h2{
   padding:4px 10px;
   margin-bottom:16px;
 }
-.pillar:nth-child(1) .tag{background:var(--spruce-soft);color:var(--spruce)}
-.pillar:nth-child(2) .tag{background:var(--raspberry-soft);color:var(--raspberry)}
-.pillar:nth-child(3) .tag{background:var(--marigold-soft);color:#8a5b12}
+.pillar:nth-child(1) .tag{background:var(--raspberry-soft);color:#A22A55}
+.pillar:nth-child(2) .tag{background:var(--mauve-soft);color:var(--mauve)}
+.pillar:nth-child(3) .tag{background:var(--paper-deep);color:var(--ink)}
 .pillar h3{font-family:var(--display);font-size:22px;font-weight:600;margin-bottom:10px}
 .pillar p{font-size:15px;color:var(--ink-soft)}
+
+/* bonus note */
+.bonus{
+  margin-top:40px;
+  background:var(--mauve-soft);
+  border:1.5px dashed var(--mauve);
+  padding:28px 30px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:22px;
+  align-items:start;
+  position:relative;
+}
+.bonus .badge{
+  font-family:var(--hand);
+  font-size:18px;
+  color:var(--paper);
+  background:var(--mauve);
+  padding:6px 14px;
+  transform:rotate(-3deg);
+  white-space:nowrap;
+}
+.bonus h3{font-family:var(--display);font-size:22px;font-weight:600;margin-bottom:6px}
+.bonus p{font-size:15.5px;color:var(--ink-soft);max-width:68ch}
+.bonus .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.bonus .chips span{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;background:#fff;border:1px solid rgba(47,27,38,.25);padding:4px 10px}
+@media(max-width:640px){.bonus{grid-template-columns:1fr;padding:24px 20px}.bonus .badge{justify-self:start}}
 
 /* ===== work ===== */
 .work-list{margin-top:44px;border-top:1.5px solid var(--ink)}
@@ -409,23 +476,6 @@ h2{
 .work-item .desc{grid-column:2/-1;font-size:15px;color:var(--ink-soft);max-width:64ch;margin-top:-8px}
 @media(max-width:640px){.work-item .desc{grid-column:1}}
 
-/* ===== content corner ===== */
-.corner{background:var(--paper-deep);border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}
-.corner-inner{max-width:var(--maxw);margin:0 auto;padding:88px 24px}
-.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:52px}
-@media(max-width:840px){.reels{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}}
-.reel{background:#fff;padding:12px 12px 46px;box-shadow:0 10px 24px rgba(39,32,26,.14);position:relative;transition:transform .22s ease;text-decoration:none;display:block}
-.reel:nth-child(1){transform:rotate(-2.4deg)}
-.reel:nth-child(2){transform:rotate(1.4deg) translateY(14px)}
-.reel:nth-child(3){transform:rotate(-1deg)}
-.reel:hover{transform:rotate(0) scale(1.04);z-index:4}
-.reel .tape{position:absolute;top:-11px;left:50%;width:80px;height:24px;transform:translateX(-50%) rotate(2deg);opacity:.85}
-.reel:nth-child(1) .tape{background:var(--raspberry-soft)}
-.reel:nth-child(2) .tape{background:var(--marigold)}
-.reel:nth-child(3) .tape{background:var(--lilac)}
-.reel .photo-slot{aspect-ratio:9/16}
-.reel .caption{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-family:var(--hand);font-size:15px;color:var(--ink-soft)}
-
 /* ===== about ===== */
 .about{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
 @media(max-width:840px){.about{grid-template-columns:1fr}}
@@ -446,7 +496,7 @@ h2{
 }
 .hand-note{
   font-family:var(--hand);
-  color:var(--spruce);
+  color:var(--mauve);
   font-size:17px;
   display:inline-block;
   transform:rotate(-1deg);
@@ -457,7 +507,7 @@ h2{
 footer{border-top:1.5px solid var(--ink);background:var(--ink);color:var(--paper)}
 .foot-inner{max-width:var(--maxw);margin:0 auto;padding:80px 24px 60px;text-align:center}
 .foot-inner h2{margin:0 auto;color:var(--paper)}
-.foot-inner .hl::after{background:rgba(237,170,60,.35)}
+.foot-inner .hl::after{background:rgba(244,169,192,.4)}
 .foot-links{margin-top:36px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
 .foot-links a{
   font-family:var(--mono);
@@ -498,6 +548,13 @@ footer{border-top:1.5px solid var(--ink);background:var(--ink);color:var(--paper
   h2{font-size:clamp(26px,7.4vw,36px)}
   .case{margin-top:32px}
   .pillars,.reels{margin-top:34px}
+  .reel{padding:8px 8px 52px}
+  .reel .caption{font-size:14px;bottom:26px}
+  .reel .kind{font-size:9px;letter-spacing:.04em;bottom:10px}
+  .reel .tape{width:60px;height:20px}
+  .flow{grid-template-columns:1fr}
+  .flow-step,.flow-step:nth-child(odd){border-right:0}
+  .flow-step:last-child{grid-column:auto}
   .story-step{padding-left:20px}
   .marquee span{font-size:12px;padding:0 18px}
   .foot-inner{padding:60px 20px 48px}
@@ -526,74 +583,149 @@ footer{border-top:1.5px solid var(--ink);background:var(--ink);color:var(--paper
 
 <div class="masthead">
   <span>Ayu Rizkyca Awalia</span>
-  <span>Personal zine — edisi 01</span>
+  <span>Personal zine — edisi 02</span>
   <span>Jakarta, ID</span>
 </div>
 
 <header class="hero">
   <div>
-    <p class="eyebrow">Engineer · product · content</p>
-    <h1>I build products <em>end-to-end</em> — from the first line of code to the <span class="hl">first 500 users</span>.</h1>
+    <p class="eyebrow">Content · product · code</p>
+    <h1>Aku bikin konten yang <em>ditonton</em> — dan kadang <span class="hl">produk di baliknya</span>.</h1>
     <span class="zero-ads">
-      zero ads. seriously.
-      <svg viewBox="0 0 220 70" fill="none" aria-hidden="true"><path d="M14 38 C 40 10, 180 6, 205 30 C 214 48, 150 64, 70 60 C 30 58, 8 50, 14 38 Z" stroke="#C43F6C" stroke-width="2.5" opacity=".55"/></svg>
+      2.000+ user, zero ads.
+      <svg viewBox="0 0 220 70" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M14 38 C 40 10, 180 6, 205 30 C 214 48, 150 64, 70 60 C 30 58, 8 50, 14 38 Z" stroke="#CF3D70" stroke-width="2.5" opacity=".55"/></svg>
     </span>
-    <p class="hero-sub">Halo, gue Ayu — software engineer di NOICE yang kebablasan sayang sama produknya sendiri: ngoding iya, riset user iya, bikin konten &amp; jadi talent-nya juga iya, sampai ngobrol partnership pun iya.</p>
+    <p class="hero-sub">Halo, aku Ayu. Aku mikirin ide, shoot, edit, dan sering jadi talent-nya sendiri — semuanya bareng AI. Background-ku software engineer, jadi aku juga bisa bangun produknya. Sekarang di NOICE, bikin KlipKlip dari nol sampai ribuan user tanpa ads, murni lewat konten.</p>
     <div class="hero-cta">
-      <a class="btn" href="#klipklip">Baca cerita KlipKlip</a>
+      <a class="btn" href="#konten">Lihat kontenku</a>
       <a class="btn ghost" href="#kontak">Say hi</a>
     </div>
   </div>
   <div class="photo-stack" aria-label="Foto Ayu">
     <div class="polaroid p1">
       <span class="tape"></span>
-      <div class="photo-slot"><img src="foto/hero-1.jpg" alt="Ayu di balik layar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">foto lo di sini ✂<br><small style="font-family:var(--mono);font-size:11px">taruh foto/hero-1.jpg</small></div></div>
+      <div class="photo-slot"><img src="foto/hero-1.jpg" alt="Ayu di balik layar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">foto kamu di sini ✂<br><small style="font-family:var(--mono);font-size:11px">taruh foto/hero-1.jpg</small></div></div>
       <span class="caption">di balik layar</span>
     </div>
     <div class="polaroid p2">
       <span class="tape"></span>
-      <div class="photo-slot"><img src="foto/hero-2.jpg" alt="Ayu di depan kamera" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">foto kedua ✂<br><small style="font-family:var(--mono);font-size:11px">taruh foto/hero-2.jpg</small></div></div>
-      <span class="caption">di depan kamera</span>
+      <div class="photo-slot"><img src="foto/hero-2.jpg" alt="Ayu memegang kamera saku di sebuah acara" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">foto kedua ✂<br><small style="font-family:var(--mono);font-size:11px">taruh foto/hero-2.jpg</small></div></div>
+      <span class="caption">kamera selalu ikut</span>
     </div>
   </div>
 </header>
 
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>✦ builds the product</span><span>✦ vibe codes with ai</span><span>✦ talks to users</span><span>✦ makes the content</span><span>✦ stars in the content</span><span>✦ closes the partnership</span>
-    <span>✦ builds the product</span><span>✦ vibe codes with ai</span><span>✦ talks to users</span><span>✦ makes the content</span><span>✦ stars in the content</span><span>✦ closes the partnership</span>
+    <span>✦ brings the idea</span><span>✦ writes the brief</span><span>✦ shoots the content</span><span>✦ edits with ai</span><span>✦ reads the data</span><span>✦ builds the product</span>
+    <span>✦ brings the idea</span><span>✦ writes the brief</span><span>✦ shoots the content</span><span>✦ edits with ai</span><span>✦ reads the data</span><span>✦ builds the product</span>
+  </div>
+</div>
+
+<div class="corner" id="konten">
+  <div class="corner-inner reveal">
+    <span class="sec-label">Content corner</span>
+    <h2>Dari ide sampai posting, aku yang pegang.</h2>
+    <p class="lede">Beda cerita, beda gaya edit — obrolan, promo produk, storytelling, sampai liputan event. Semuanya aku yang mikirin idenya, shoot, dan edit bareng AI, buat KlipKlip maupun akun pribadiku.</p>
+    <div class="stats">
+      <span><b>±1 tahun</b> rutin ngonten</span>
+      <span><b>IG</b> @ayu_rizkyca</span>
+      <span><b>host</b> Noice Radio</span>
+      <span><b>AI</b> editing skill buatan sendiri</span>
+    </div>
+    <div class="reels">
+      <a class="reel" href="https://www.instagram.com/p/DfgYKOPpTnC/" target="_blank" rel="noopener">
+        <span class="tape"></span>
+        <div class="photo-slot"><img src="foto/konten-1.jpg" alt="Reel: belajar makeup karena patah hati?" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">konten #1 ✂</div></div>
+        <span class="caption">belajar makeup?</span>
+        <span class="kind">storytelling · beauty</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/p/DIH-SjxzzBH/" target="_blank" rel="noopener">
+        <span class="tape"></span>
+        <div class="photo-slot"><img src="foto/konten-5.jpg" alt="Reel: lampu bunga dari pipe cleaner" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">konten #5 ✂</div></div>
+        <span class="caption">lampu pipe cleaner</span>
+        <span class="kind">crafting · DIY</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/p/Df0xpIJTIGe/" target="_blank" rel="noopener">
+        <span class="tape"></span>
+        <div class="photo-slot"><img src="foto/konten-2.jpg" alt="Reel: ngobrol soal developer di era AI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">konten #2 ✂</div></div>
+        <span class="caption">dev di era AI</span>
+        <span class="kind">obrolan · motion graphic</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/p/DfyZV5vyWfd/" target="_blank" rel="noopener">
+        <span class="tape"></span>
+        <div class="photo-slot"><img src="foto/konten-3.jpg" alt="Reel KlipKlip: males ngonten?" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">konten #3 ✂</div></div>
+        <span class="caption">males ngonten?</span>
+        <span class="kind">promo · KlipKlip</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/p/DflxsAPJyar/" target="_blank" rel="noopener">
+        <span class="tape"></span>
+        <div class="photo-slot"><img src="foto/konten-4.jpg" alt="Reel: liputan DevFest Jakarta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">konten #4 ✂</div></div>
+        <span class="caption">DevFest Jakarta</span>
+        <span class="kind">event recap · vlog</span>
+      </a>
+    </div>
+
+    <p class="flow-title">↓ cara aku bikin konten</p>
+    <div class="flow">
+      <div class="flow-step">
+        <span class="num">01</span>
+        <h3>Ide &amp; series</h3>
+        <p>Mulai dari audiens: apa yang lagi rame, apa yang mereka tanyain, apa yang bisa jadi series.</p>
+      </div>
+      <div class="flow-step">
+        <span class="num">02</span>
+        <h3>Brief &amp; script</h3>
+        <p>Hook, alur, shot list. Dibantu Claude &amp; ChatGPT biar cepet, tapi rasanya tetap aku.</p>
+      </div>
+      <div class="flow-step">
+        <span class="num">03</span>
+        <h3>Shoot</h3>
+        <p>Di depan kamera atau di belakangnya. HP cukup, yang penting cahaya &amp; momen.</p>
+      </div>
+      <div class="flow-step">
+        <span class="num">04</span>
+        <h3>Edit bareng AI</h3>
+        <p>Dulu CapCut. Sekarang aku bikin <em>skill</em> editing sendiri pakai AI — jump cut, caption, gaya visual — yang bisa di-custom sesuai style &amp; taste.</p>
+      </div>
+      <div class="flow-step">
+        <span class="num">05</span>
+        <h3>Baca datanya</h3>
+        <p>Retention, views, komentar. Kenapa video ini jalan? Jawabannya jadi ide berikutnya.</p>
+      </div>
+    </div>
   </div>
 </div>
 
 <section id="klipklip" class="reveal">
   <span class="sec-label">Case study № 1</span>
-  <h2>KlipKlip: dari eksperimen iseng jadi produk dengan ~500 user.</h2>
-  <p class="lede">Produk AI yang motongin konten panjang jadi klip siap post. Gue pegang semuanya — arsitektur, roadmap, konten, growth — dan semua usernya dateng tanpa sepeser pun budget ads.</p>
+  <h2>KlipKlip: tumbuh sampai 2.000+ user, modalnya konten.</h2>
+  <p class="lede">Produk AI yang motongin video panjang jadi klip vertikal siap post, lengkap dengan subtitle Bahasa Indonesia. Aku pegang semuanya — arah produk, build, konten, sampai growth — dan semua usernya dateng tanpa sepeser pun budget ads.</p>
 
   <div class="case">
     <div>
       <div class="story-step reveal">
-        <h3>Mulai dari gap yang keliatan</h3>
-        <p>Podcaster &amp; creator butuh klip pendek buat distribusi, tapi motongin manual itu makan waktu. Gue prototype workflow otomatis pakai n8n — awalnya cuma eksperimen pribadi.</p>
+        <h3>Mulai dari masalah kreator</h3>
+        <p>Podcaster &amp; kreator butuh klip pendek buat distribusi, tapi motong manual makan waktu. Aku prototype workflow otomatis pakai n8n — awalnya cuma eksperimen.</p>
         <p class="note">↳ eksperimen ini akhirnya diadopsi jadi produk resmi NOICE</p>
       </div>
       <div class="story-step reveal">
-        <h3>Build sistemnya dari nol</h3>
-        <p>AI pipeline, arsitektur, sampai UI — dirakit sendiri. Launch pertama langsung dapet 136 user aktif, murni organik.</p>
+        <h3>Build bareng AI</h3>
+        <p>Sistem AI, arsitektur, sampai UI dirakit bareng Claude Code. Karena dikerjain bareng AI, satu orang bisa gerak secepat satu tim kecil.</p>
       </div>
       <div class="story-step reveal">
         <h3>Growth = konten + ngobrol sama user</h3>
-        <p>Gue bikin konten KlipKlip sendiri (iya, sekalian jadi talent-nya), interview user langsung, dan pakai funnel analysis Mixpanel buat nemuin titik drop-off yang paling penting buat dibenahin.</p>
+        <p>Aku bikin konten KlipKlip sendiri (iya, sekalian jadi talent-nya), interview user langsung, dan baca data di Mixpanel buat tahu konten &amp; fitur mana yang beneran bikin orang balik lagi.</p>
       </div>
       <div class="story-step reveal">
-        <h3>Sampai ke meja partnership</h3>
-        <p>Sekarang hampir 500 user dan udah sampai tahap obrolan investor — yang akhirnya jadi pelajaran menarik soal struktur bisnis &amp; white-label. Cerita panjangnya seru, tanyain aja kalau ketemu.</p>
-        <p class="note">↳ target berikutnya: terus scale, tetap organik dulu</p>
+        <h3>Sampai ke partner</h3>
+        <p>Sekarang 2.000+ user, ada program referral, voucher partner, dan API yang bikin platform lain bisa pakai mesin clipping KlipKlip di situs mereka.</p>
+        <p class="note">↳ masih organik, masih konsisten</p>
       </div>
     </div>
 
     <div class="receipt-wrap reveal">
-      <div class="receipt" role="img" aria-label="Struk perjalanan KlipKlip: dari nol sampai hampir 500 user organik, belanja ads nol rupiah">
+      <div class="receipt" role="img" aria-label="Struk perjalanan KlipKlip: dari nol sampai 2.000+ user organik, belanja ads nol rupiah">
         <div class="r-head">
           <strong>KLIPKLIP.ID</strong>
           <span>struk perjalanan · 2025–2026</span>
@@ -601,11 +733,10 @@ footer{border-top:1.5px solid var(--ink);background:var(--ink);color:var(--paper
         <div class="row"><span>Ide + prototype n8n</span><span>×1</span></div>
         <div class="row"><span>AI system dari nol</span><span>×1</span></div>
         <div class="row"><span>Vibe coding session</span><span>∞</span></div>
-        <div class="row"><span>User launch pertama</span><span>136</span></div>
         <div class="row"><span>Konten dibikin sendiri</span><span>banyak</span></div>
-        <div class="row"><span>Obrolan partnership</span><span>aktif</span></div>
+        <div class="row"><span>Ngobrol sama user</span><span>rutin</span></div>
         <div class="sep"></div>
-        <div class="row total"><span>TOTAL USER</span><span>±500</span></div>
+        <div class="row total"><span>TOTAL USER</span><span>2.000+</span></div>
         <div class="row total"><span>BELANJA ADS</span><span>Rp 0</span></div>
         <div class="sep"></div>
         <div class="row"><span>Dibayar dengan</span><span>konsistensi</span></div>
@@ -617,88 +748,78 @@ footer{border-top:1.5px solid var(--ink);background:var(--ink);color:var(--paper
 </section>
 
 <section class="reveal">
-  <span class="sec-label">Yang gue kerjain</span>
+  <span class="sec-label">Yang aku kerjain</span>
   <h2>Satu orang, tiga topi.</h2>
-  <p class="lede">Kok bisa dikerjain sendirian? Karena gue nggak sendirian — gue kerja bareng AI. Vibe coding biar bisa ship cepet, AI pipeline di dalam produknya, dan sisanya: kepo yang nggak ada habisnya.</p>
+  <p class="lede">Kok bisa dikerjain sendirian? Karena aku nggak sendirian — aku kerja bareng AI tiap hari, dari nulis script sampai nulis kode.</p>
   <div class="pillars">
     <div class="pillar reveal">
-      <span class="tag">Engineering</span>
-      <h3>Build-nya</h3>
-      <p>React/Next.js, AI pipeline, automation (n8n), analytics implementation. Dibangun bareng AI — vibe coding biar satu orang bisa gerak secepat satu tim.</p>
+      <span class="tag">Content</span>
+      <h3>Suaranya</h3>
+      <p>Ide series, script, shoot, edit, dan jadi talent. Edit pakai AI skill yang aku racik sendiri, dan pakai data buat ngerti kenapa sebuah video jalan.</p>
     </div>
     <div class="pillar reveal">
       <span class="tag">Product &amp; growth</span>
       <h3>Arahnya</h3>
-      <p>User research, funnel analysis (Mixpanel, GA4), prioritisasi roadmap, GTM strategy, sampai partnership &amp; obrolan investor.</p>
+      <p>Riset user, baca funnel (Mixpanel, GA4), strategi go-to-market, referral &amp; partnership. Konten yang bagus tetap butuh arah yang jelas.</p>
     </div>
     <div class="pillar reveal">
-      <span class="tag">Content</span>
-      <h3>Suaranya</h3>
-      <p>Konten TikTok &amp; sosial buat KlipKlip — ditulis, direkam, dan dibintangi sendiri. Karena produk bagus juga butuh cerita yang bagus.</p>
+      <span class="tag">Engineering</span>
+      <h3>Build-nya</h3>
+      <p>React/Next.js, automasi n8n, AI pipeline. Lulusan Teknik Informatika yang sekarang ngoding bareng AI biar bisa ship cepet.</p>
+    </div>
+  </div>
+
+  <div class="bonus reveal">
+    <span class="badge">nilai plus ✦</span>
+    <div>
+      <h3>Butuh sisi teknisnya juga? Bisa.</h3>
+      <p>Web jualan, landing page, link-in-bio custom, atau automasi kecil biar kerjaan konten nggak repetitif — aku bisa bantu bangun, atau nemenin belajar vibe coding-nya. Situs ini sendiri aku bikin bareng AI.</p>
+      <div class="chips"><span>web jualan</span><span>landing page</span><span>vibe coding</span><span>automasi</span><span>analytics</span></div>
     </div>
   </div>
 </section>
 
 <section class="reveal">
   <span class="sec-label">Selected work</span>
-  <h2>Yang lain, yang juga gue banggain.</h2>
+  <h2>Yang lain, yang juga aku banggain.</h2>
   <div class="work-list">
     <a class="work-item reveal" href="https://klipklip.id" target="_blank" rel="noopener">
       <span class="year">2025–26</span>
       <span class="name">KlipKlip.id</span>
-      <span class="metric">±500 user, zero ads</span>
-      <span class="desc">Produk AI content clips — dibangun &amp; di-grow end-to-end. Cerita lengkapnya di atas ↑</span>
+      <span class="metric">2.000+ user, zero ads</span>
+      <span class="desc">Produk AI clipping video — dibangun &amp; di-grow end-to-end. Cerita lengkapnya di atas ↑</span>
     </a>
+    <div class="work-item reveal">
+      <span class="year">2026</span>
+      <span class="name">Noice Radio</span>
+      <span class="metric">aku juga host-nya</span>
+      <span class="desc">Stasiun 24 jam dengan tema harian di tab Radio aplikasi &amp; web NOICE — aku yang launch, sekaligus jadi suara di baliknya.</span>
+    </div>
     <a class="work-item reveal" href="https://www.linkedin.com/posts/ayu-rizkyca-awalia_noice-paranoice-wrapped2025-activity-7410230164535832576-8ygX" target="_blank" rel="noopener">
       <span class="year">2025</span>
       <span class="name">NOICE Postcard</span>
       <span class="metric">13.000+ users</span>
-      <span class="desc">Year-in-review interaktif bertema kartu pos — rame dibagiin di sosmed pas akhir tahun.</span>
+      <span class="desc">Year-in-review interaktif bertema kartu pos, dirancang biar gampang dibagiin — dan rame dibagiin di sosmed pas akhir tahun.</span>
     </a>
     <a class="work-item reveal" href="https://studio.noice.id" target="_blank" rel="noopener">
       <span class="year">2025</span>
       <span class="name">Noice Web Studio &amp; Player</span>
       <span class="metric">daily driver kreator</span>
-      <span class="desc">Revamp UI/UX studio kreator &amp; optimasi web player buat pengalaman streaming yang lebih mulus.</span>
+      <span class="desc">Revamp studio kreator biar ngatur konten lebih gampang, plus web player yang lebih mulus.</span>
     </a>
     <div class="work-item reveal">
       <span class="year">2024</span>
       <span class="name">Gromart Point</span>
       <span class="metric">B2B loyalty</span>
-      <span class="desc">Sistem undian akhir tahun buat retensi user B2B FMCG — dari desain kompleks jadi platform responsif. (Internal, nggak ada link publik.)</span>
+      <span class="desc">Sistem undian akhir tahun buat campaign marketing B2B FMCG — selesai tepat waktu buat launch. (Internal, nggak ada link publik.)</span>
     </div>
   </div>
 </section>
 
-<div class="corner">
-  <div class="corner-inner reveal">
-    <span class="sec-label">Content corner</span>
-    <h2>Kadang gue yang di depan kamera.</h2>
-    <p class="lede">Bikin konten itu bukan side quest — itu cara gue riset user, growth channel utama KlipKlip, dan tempat gue cerita soal upcycling &amp; barang secondhand.</p>
-    <div class="reels">
-      <a class="reel" href="https://www.instagram.com/p/DZ3tLMZyE03/" target="_blank" rel="noopener">
-        <span class="tape"></span>
-        <div class="photo-slot"><img src="foto/tiktok-1.jpg" alt="Konten TikTok KlipKlip" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">screenshot TikTok #1 ✂<br><small style="font-family:var(--mono);font-size:11px">taruh foto/tiktok-1.jpg</small></div></div>
-        <span class="caption">konten KlipKlip</span>
-      </a>
-      <a class="reel" href="https://www.tiktok.com/@ayu_rizkyca/video/7599215592867941650" target="_blank" rel="noopener">
-        <span class="tape"></span>
-        <div class="photo-slot"><img src="foto/tiktok-2.jpg" alt="Konten TikTok build in public" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">screenshot TikTok #2 ✂<br><small style="font-family:var(--mono);font-size:11px">taruh foto/tiktok-2.jpg</small></div></div>
-        <span class="caption">build in public</span>
-      </a>
-      <a class="reel" href="https://www.instagram.com/reel/DTOTDhck91o/" target="_blank" rel="noopener">
-        <span class="tape"></span>
-        <div class="photo-slot"><img src="foto/tiktok-3.jpg" alt="Konten TikTok crafting dan upcycling" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">screenshot TikTok #3 ✂<br><small style="font-family:var(--mono);font-size:11px">taruh foto/tiktok-3.jpg</small></div></div>
-        <span class="caption">crafting &amp; upcycling</span>
-      </a>
-    </div>
-  </div>
-</div>
-
 <section class="about reveal">
   <div class="polaroid">
-    <span class="tape" style="background:var(--marigold)"></span>
-    <div class="photo-slot"><img src="foto/about.jpg" alt="Foto santai Ayu" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">foto santai lo ✂<br><small style="font-family:var(--mono);font-size:11px">taruh foto/about.jpg</small></div></div>
+    <span class="tape" style="background:var(--blush)"></span>
+    <div class="photo-slot"><img src="foto/about.jpg" alt="Foto santai Ayu" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="photo-empty" style="display:none">foto santai kamu ✂<br><small style="font-family:var(--mono);font-size:11px">taruh foto/about.jpg</small></div></div>
     <span class="caption">hi, it's me</span>
   </div>
   <div>
@@ -706,10 +827,10 @@ footer{border-top:1.5px solid var(--ink);background:var(--ink);color:var(--paper
     <h2>Suka ngubah barang buangan jadi sesuatu yang baru.</h2>
     <ul class="about-notes">
       <li>Berlaku buat kain sisa &amp; baju secondhand (hobi crafting yang pelan-pelan jadi mimpi startup),</li>
-      <li>berlaku buat konten panjang yang dipotong jadi klip (halo, KlipKlip),</li>
+      <li>berlaku buat video panjang yang dipotong jadi klip (halo, KlipKlip),</li>
       <li>dan berlaku buat eksperimen iseng yang berubah jadi produk resmi.</li>
     </ul>
-    <p class="lede">Sekarang di NOICE, platform podcast &amp; audio terbesar di Indonesia — ngerjain apapun yang produknya butuhin: kode, data, konten, atau sekadar nanya "sebenernya user kita butuh apa sih?"</p>
+    <p class="lede">Sekarang di NOICE, platform podcast &amp; audio terbesar di Indonesia — ngerjain apapun yang produknya butuhin: konten, kode, data, atau sekadar nanya "sebenernya audiens kita butuh apa sih?"</p>
     <span class="hand-note">→ transforming discarded things into something new, itu benang merahnya.</span>
   </div>
 </section>
@@ -719,8 +840,9 @@ footer{border-top:1.5px solid var(--ink);background:var(--ink);color:var(--paper
     <h2>Lagi bikin sesuatu? <span class="hl">Ayo ngobrol.</span></h2>
     <div class="foot-links">
       <a href="mailto:ayurizkycaaa@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/ayu-rizkyca-awalia/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/ayu_rizkyca/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.tiktok.com/@ayu_rizkyca" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.linkedin.com/in/ayu-rizkyca-awalia/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://klipklip.id" target="_blank" rel="noopener">KlipKlip</a>
     </div>
     <p class="colophon">Vibe-coded dengan penasaran, kopi &amp; AI · Jakarta · 2026</p>

@@ -2,7 +2,7 @@
 
 Personal portfolio site, gaya zine/polaroid. Satu file HTML statis, tanpa build step.
 
-**Live:** https://ayurizkyca.netlify.app (deploy via Netlify)
+**Live:** https://ayura-web.netlify.app (deploy via Netlify)
 
 ## Struktur
 
