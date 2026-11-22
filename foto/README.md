@@ -6,7 +6,7 @@ Taruh foto di folder ini dengan nama file **persis** seperti di bawah — begitu
 |---|---|---|---|
 | `hero-1.jpg` | Polaroid besar di hero | 4:5 (potret) | Kamu lagi kerja / di balik layar |
 | `hero-2.jpg` | Polaroid kedua di hero | 4:5 (potret) | Candid / on-camera |
-| `konten-1.jpg` … `konten-5.jpg` | Content corner (urutan tampil diatur di `index.html`) | 9:16 (vertikal) | Thumbnail/frame dari reel. Link & label diatur di `index.html` |
+| `konten-1.jpg` … `konten-7.jpg` (konten-5 udah nggak dipakai) | Content corner (urutan tampil diatur di `index.html`) | 9:16 (vertikal) | Thumbnail/frame dari reel. Link & label diatur di `index.html` |
 | `about.jpg` | Section About | 4:5 (potret) | Foto santai yang paling "kamu banget" |
 
 Tips:
